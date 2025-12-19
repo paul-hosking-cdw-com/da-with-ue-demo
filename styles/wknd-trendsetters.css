@@ -1,0 +1,275 @@
+/*
+ * WKND Trendsetters Design System
+ * Imported from https://www.wknd-trendsetters.site/
+ */
+
+:root {
+  /* WKND Trendsetters Color Palette */
+  --wknd-bg-primary: #fff;
+  --wknd-bg-secondary: #f7f8f5;
+  --wknd-bg-inverse: #000;
+  --wknd-text-primary: #000;
+  --wknd-text-secondary: rgb(0 0 0 / 70%);
+  --wknd-text-tertiary: rgb(0 0 0 / 60%);
+  --wknd-tag-bg: rgb(0 0 0 / 10%);
+
+  /* WKND Trendsetters Typography */
+  --wknd-font-heading: 'Syncopate', sans-serif;
+  --wknd-font-body: 'Instrument Sans', sans-serif;
+  
+  /* Heading Sizes */
+  --wknd-h1-size: 90.4px;
+  --wknd-h2-size: 45.28px;
+  --wknd-h3-size: 22.56px;
+  --wknd-body-size: 16px;
+  --wknd-subheading-size: 18.08px;
+  --wknd-eyebrow-size: 14.4px;
+
+  /* Spacing & Layout */
+  --wknd-container-max-width: 1000px;
+  --wknd-container-padding: 0 16px;
+  --wknd-button-padding: 16px 24px;
+  --wknd-button-radius: 1600px;
+  --wknd-tag-padding: 1.8px 9px;
+  --wknd-tag-radius: 1600px;
+}
+
+/* Typography Overrides for WKND Trendsetters Style */
+h1 {
+  font-family: var(--wknd-font-heading);
+  font-size: var(--wknd-h1-size);
+  font-weight: 400;
+  color: var(--wknd-text-primary);
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: var(--wknd-font-heading);
+  font-size: var(--wknd-h2-size);
+  font-weight: 400;
+  color: var(--wknd-text-primary);
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: var(--wknd-font-heading);
+  font-size: var(--wknd-h3-size);
+  font-weight: 400;
+  color: var(--wknd-text-primary);
+  line-height: 1.3;
+}
+
+h4, h5, h6 {
+  font-family: var(--wknd-font-heading);
+  font-weight: 400;
+  color: var(--wknd-text-primary);
+}
+
+body {
+  font-family: var(--wknd-font-body);
+  font-size: var(--wknd-body-size);
+  color: var(--wknd-text-primary);
+  background-color: var(--wknd-bg-primary);
+}
+
+/* Eyebrow Text */
+.eyebrow {
+  font-size: var(--wknd-eyebrow-size);
+  font-weight: 400;
+  color: var(--wknd-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5em;
+}
+
+/* Subheading */
+.subheading {
+  font-size: var(--wknd-subheading-size);
+  font-weight: 400;
+  color: var(--wknd-text-secondary);
+  line-height: 1.5;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  background-color: var(--wknd-tag-bg);
+  color: var(--wknd-text-primary);
+  padding: var(--wknd-tag-padding);
+  border-radius: var(--wknd-tag-radius);
+  font-size: 0.875em;
+  font-weight: 500;
+}
+
+/* Buttons - WKND Trendsetters Style */
+a.button:any-link,
+button.button {
+  background-color: transparent;
+  border: 1px solid var(--wknd-text-primary);
+  color: var(--wknd-text-primary);
+  padding: var(--wknd-button-padding);
+  border-radius: var(--wknd-button-radius);
+  font-family: var(--wknd-font-body);
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+a.button:hover,
+button.button:hover {
+  background-color: var(--wknd-text-primary);
+  color: var(--wknd-bg-primary);
+}
+
+a.button.secondary,
+button.button.secondary {
+  background-color: transparent;
+  border: 1px solid var(--wknd-text-primary);
+  color: var(--wknd-text-primary);
+}
+
+a.button.secondary:hover,
+button.button.secondary:hover {
+  background-color: var(--wknd-text-primary);
+  color: var(--wknd-bg-primary);
+}
+
+/* Section Styling */
+main > .section {
+  background-color: var(--wknd-bg-primary);
+}
+
+main > .section.secondary,
+main > .section[data-section-style="secondary"],
+main > .section[data-section-style*="secondary"] {
+  background-color: var(--wknd-bg-secondary);
+  padding: 60px 0;
+  margin: 0;
+}
+
+main > .section.inverse,
+main > .section[data-section-style="inverse"],
+main > .section[data-section-style*="inverse"] {
+  background-color: var(--wknd-bg-inverse);
+  color: var(--wknd-bg-primary);
+  padding: 60px 0;
+  margin: 0;
+}
+
+main > .section.inverse h1,
+main > .section.inverse h2,
+main > .section.inverse h3,
+main > .section.inverse h4,
+main > .section.inverse h5,
+main > .section.inverse h6 {
+  color: var(--wknd-bg-primary);
+}
+
+/* Paragraph Styles */
+p {
+  font-size: var(--wknd-body-size);
+  line-height: 1.6;
+  margin: 1em 0;
+}
+
+main > .section.inverse p,
+main > .section.inverse .subheading {
+  color: rgb(255 255 255 / 80%);
+}
+
+main > .section.inverse .eyebrow {
+  color: rgb(255 255 255 / 60%);
+}
+
+main > .section.inverse a.button {
+  border-color: var(--wknd-bg-primary);
+  color: var(--wknd-bg-primary);
+}
+
+main > .section.inverse a.button:hover {
+  background-color: var(--wknd-bg-primary);
+  color: var(--wknd-bg-inverse);
+}
+
+/* Container */
+main > .section > div {
+  max-width: var(--wknd-container-max-width);
+  margin: 0 auto;
+  padding: var(--wknd-container-padding);
+}
+
+/* Responsive Typography */
+@media (width < 900px) {
+  :root {
+    --wknd-h1-size: 60px;
+    --wknd-h2-size: 36px;
+    --wknd-h3-size: 24px;
+    --wknd-body-size: 16px;
+    --wknd-subheading-size: 16px;
+  }
+}
+
+@media (width >= 1200px) {
+  main > .section > div {
+    padding: 0 32px;
+  }
+}
+
+/* Links */
+a:any-link {
+  color: var(--wknd-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* Cards Block - WKND Style */
+.cards > ul {
+  gap: 24px;
+}
+
+.cards > ul > li {
+  background-color: transparent;
+  border: none;
+}
+
+/* Tabs Block - WKND Style */
+.tabs .tabs-list button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-family: var(--wknd-font-body);
+}
+
+.tabs .tabs-list button[aria-selected='true'] {
+  background-color: transparent;
+  border-bottom: 2px solid currentcolor;
+}
+
+/* Accordion Block - WKND Style */
+.accordion details {
+  border: none;
+  border-bottom: 1px solid rgb(0 0 0 / 10%);
+  background-color: transparent;
+}
+
+.accordion details summary {
+  padding: 16px 0;
+  background-color: transparent;
+}
+
+.accordion details[open] summary {
+  background-color: transparent;
+}
+
+/* Columns Block - WKND Style */
+.columns > div > div {
+  gap: 24px;
+}
+

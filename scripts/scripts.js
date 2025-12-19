@@ -218,9 +218,12 @@ if (window.location.hostname.includes('ue.da.live')) {
 
 loadPage();
 
-(function da() {
-  const { searchParams } = new URL(window.location.href);
+const { searchParams, origin } = new URL(window.location.href);
+const branch = searchParams.get('nx') || 'main';
 
+export const NX_ORIGIN = branch === 'local' || origin.includes('localhost') ? 'http://localhost:6456/nx' : 'https://da.live/nx';
+
+(function da() {
   const lp = searchParams.get('dapreview');
   // eslint-disable-next-line import/no-unresolved
   if (lp) import('https://da.live/scripts/dapreview.js').then((mod) => mod.default(loadPage));

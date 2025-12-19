@@ -2,8 +2,16 @@
 coverage/*
 logs/*
 node_modules/*
+.claude/skills/scrape-webpage/scripts/node_modules/*
 
 helix-importer-ui
 .DS_Store
 *.bak
 .idea
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
